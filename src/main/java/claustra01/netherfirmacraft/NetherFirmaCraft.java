@@ -1,6 +1,7 @@
 package claustra01.netherfirmacraft;
 
-import claustra01.netherfirmacraft.block.NFCBlock;
+import claustra01.netherfirmacraft.block.NFCBlocks;
+import claustra01.netherfirmacraft.item.NFCItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ public class NetherFirmaCraft {
 
 	public NetherFirmaCraft() {
 		final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		NFCBlock.BLOCKS.register(bus);
+		NFCItems.ITEMS.register(bus);
+		NFCBlocks.BLOCKS.register(bus);
 	}
 }
